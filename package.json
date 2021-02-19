@@ -1,0 +1,14 @@
+{
+  "name": "pap",
+  "version": "1.0.0",
+  "description": "Portfolio related to a multimedia project",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css --recursive"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^5.0.0"
+  }
+}
