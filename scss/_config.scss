@@ -1,31 +1,74 @@
 // Variables
-$primary-color: #444;
-$secondary-color: #eece1a;
-$show-home-image: true;
-$home-image: url("/img/home-image.jpg");
-$background-opacity: 0.7;
+$primary-color: #2f2f2f;
+$secondary-color: #e8e8e8;
+
+$home-image: url("../../img/home-image.jpg");
+
+
+$welcome_section_bg: url("../../img/welcome-bg.jpg");
+$video-background: url("../../img/welcome-bg.jpg");
+$credits-background-img: url("../../img/credits-bg.png");
+$footer-img: url("../../img/footer-bg.jpeg");
+
+@font-face {
+  font-family: Titles_Recife;
+  src: url("../../fonts/RecifeDisplayTrial-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Text_Montserrat;
+  src: url("../../fonts/Montserrat-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Text_Montserrat_Bold;
+  src: url("../../fonts/Montserrat-Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Bon_Voyage;
+  src: url("../../fonts/Bon_Voyage_regular.otf") format("opentype");
+}
 
 @mixin easeOut {
   transition: all 0.5s ease-out;
 }
 
 @mixin background {
-  @if $show-home-image {
-    &#bg-img {
-      background: $home-image;
-      background-attachment: fixed;
-      background-size: cover;
+    background-attachment: fixed;
+    background-size: cover;
 
-      &:after {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-        background: rgba($primary-color, $background-opacity);
-      }
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
     }
+}
+
+// Media Query Mixins
+@mixin mediaSM {
+  @media screen and (max-width: 500px) {
+    @content;
+  }
+}
+
+@mixin mediaMD {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mediaLG {
+  @media screen and (min-width: 769px) and (max-width: 1170px) {
+    @content;
+  }
+}
+@mixin mediaXL {
+  @media screen and (min-width: 1171px) {
+    @content;
   }
 }

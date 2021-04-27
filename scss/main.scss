@@ -1,64 +1,67 @@
 @import "config";
 @import "menu";
+@import "mobile";
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  @include background;
   background-color: $primary-color;
-  color: white;
   height: 100%;
   margin: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Text_Montserrat;
   line-height: 1.5;
 }
 
-// Headings
+// cabeçalhos
 h1,
 h2,
 h3 {
   margin: 0;
-  font-weight: 400;
 
   &.lg-heading {
-    font-size: 6rem;
+    font-size: 5rem;
+    font-weight: 100;
+    font-family: Bon_Voyage;
   }
 
   &.sm-heading {
     margin-bottom: 2rem;
-    padding: 0.2rem 1rem;
-    background: rgba(lighten($primary-color, 2), 0.5);
+    font-weight: normal;
+    font-size: 1.2rem;
+    font-family: Text_Montserrat;
+  }
+
+  &.md-heading {
+    font-weight: 100;
+    font-size: 2.3rem;
+    font-family: Bon_Voyage;
   }
 }
 
 // Links
 a {
   text-decoration: none;
-  color: white;
+  color: $secondary-color;
 }
 
+// Header
 header {
   position: fixed;
   z-index: 2;
   width: 100%;
 }
 
-.text-secondary {
-  color: $secondary-color;
-}
-
+// Zona principal
 main {
   padding: 4rem;
   height: 100%;
 
-  &#home {
-    overflow: hidden;
-
-    h1 {
-      margin-top: 20vh;
-    }
+  .container {
+    width: 60%;
+    margin-left: 7vw;
+    text-align: justify;
   }
 
   .icons {
@@ -72,6 +75,492 @@ main {
         color: $secondary-color;
         @include easeOut();
       }
+    }
+  }
+}
+
+// Botão
+.button {
+  border: 2px solid $secondary-color;
+  color: $secondary-color;
+  background-color: rgba($secondary-color, 0);
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-transform: uppercase;
+
+  &:hover {
+    color: $primary-color;
+    border: 2 px solid $primary-color;
+    background-color: $secondary-color;
+    @include easeOut();
+  }
+}
+
+// Slider vertical
+body .slider__body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.slider__container {
+  position: fixed;
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-transition: -webkit-transform 500ms ease-in-out;
+  transition: -webkit-transform 500ms ease-in-out;
+  o-transition: transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out;
+}
+
+.slider__page {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slider__indicators {
+  position: fixed;
+  right: 48px;
+  top: 50%;
+  z-index: 2;
+  margin: 0;
+  padding: 0;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.slider__indicator {
+  display: block;
+  width: 10px;
+  height: 10px;
+  margin: 10px 0;
+  border-radius: 100px;
+  background-color: $secondary-color;
+  cursor: default;
+}
+
+.slider__indicator--active {
+  opacity: 0.3;
+}
+
+// Conteudo principal
+
+.slides {
+  // Pagina de boas vindas
+  #welcome {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    @include background;
+
+    #welcome-bg-video {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+    }
+
+    .welcome-text-area {
+      display: flex;
+      flex-direction: column;
+      color: $secondary-color;
+      text-align: center;
+      height: 100%;
+      position: fixed;
+      bottom: 0;
+      color: #f1f1f1;
+      width: 100%;
+      padding: 20px;
+      justify-content: space-around;
+      background: rgba(0, 0, 0, 0.5);
+
+      .title {
+        font-family: Bon_Voyage;
+        font-size: 12rem;
+      }
+
+      .subtitle {
+        font-family: Text_Montserrat;
+      }
+
+      .scroll_container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        #scroll_icon {
+          width: 100px;
+          opacity: 0.6;
+          height: auto;
+          cursor: pointer;
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+
+        #scroll-down {
+          text-transform: uppercase;
+          opacity: 0.7;
+          font-size: 1.3rem;
+          &:hover {
+            opacity: 1;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  // Introdução
+  #intro {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: $secondary-color;
+    font-weight: 100;
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      color: $primary-color;
+      padding: 0 10% 0 8%;
+      width: 90%;
+      text-align: justify;
+
+
+      .title-container {
+        .title {
+          font-family: Bon_Voyage;
+          font-size: 2.2rem;
+        }
+      }
+
+      .subtitle-container {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        .subtitle {
+          font-family: Text_Montserrat;
+          font-size: 1.2rem;
+        }
+      }
+
+      #watch-video-btn {
+        cursor: pointer;
+        align-self: flex-start;
+        color: white;
+        border: 1px solid $primary-color;
+        background: linear-gradient(#5c7667, #729bbc);
+        padding: 1rem;
+        margin-top: 3%;
+        font-size: 1rem;
+        text-transform: uppercase;
+        font-family: Text_Montserrat_Bold;
+      }
+    }
+  }
+
+  // Video principal
+  #video {
+    display: flex;
+    flex-direction: row;
+    background-color: $secondary-color;
+    color: $primary-color;
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      video {
+        object-fit: fill;
+        width: 100%;
+        height: 100vh;
+      }
+    }
+
+    .video-text {
+      height: 30%;
+      display: flex;
+      align-items: center;
+      font-size: 1.2rem;
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+  }
+
+  // Making of
+  #making-of {
+    display: flex;
+    flex-direction: row;
+    background-color: $secondary-color;
+    color: $primary-color;
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      video {
+        object-fit: fill;
+        width: 100%;
+        height: 100vh;
+      }
+    }
+  }
+
+  // Creditos
+  #credits {
+    color: $primary-color;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    background-color: $secondary-color;
+    color: $primary-color;
+
+    .photo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40%;
+      height: 100%;
+      padding-bottom: 5%;
+
+      img {
+        width: 50%;
+        height: auto;
+      }
+    }
+
+    .container {
+      width: 60%;
+      padding-right: 10%;
+      padding-top: 7%;
+
+      .title {
+        font-family: Bon_Voyage;
+        font-size: 7rem;
+      }
+
+      .subtitle-container {
+        width: 80%;
+        .subtitle {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+
+  // Creditos pessoais
+  .credits-person {
+    background-color: $secondary-color;
+    color: $primary-color;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 5%;
+
+    .container {
+      display:flex;
+      flex-direction: row;
+      justify-content: center;
+      text-align: center;
+      width: 65%;
+      
+      .person {
+        flex-direction: column;
+        width: 75%;
+        display: flex;
+        justify-content: flex-end;
+        height: 100%;
+        
+        .person-picture {
+          height: 70vh;
+        }
+        img {
+          width: 67%;
+          height: 100%;
+        }
+        
+        #img_stretch{
+          img {
+            width: 70% !important;
+          }
+        }
+
+        #only-photo {
+          width: 40% !important;
+        }
+
+        .person-description-container {
+            line-height: 100%;
+            margin-top: 7%;
+            .name {
+              font-family: Bon_Voyage;
+              font-size: 3rem;
+            }
+            .function {
+              font-size: 1.5rem;
+            }
+        }
+      }
+
+    }
+  }
+
+
+
+  // .credits-person {
+  //   display: flex;
+  //   flex-direction: row;
+  //   background-color: $secondary-color;
+  //   color: $primary-color;
+  //   justify-content: center;
+  //   align-items: center;
+  //   height: 100%;
+
+  //   .person-picture {
+  //     width: 40%;
+  //     display: flex;
+  //     justify-content: center;
+
+  //     img {
+  //       width: 70%;
+  //       height: auto;
+  //     }
+  //   }
+
+  //   .person-description {
+  //     display: flex;
+  //   height: 100%;
+
+  //     flex-direction: column;
+  //     justify-content: space-around;
+  //     text-align: center;
+  //     .person-description-container {
+  //       line-height: 100%;
+  //       .name {
+  //         font-family: Bon_Voyage;
+  //         font-size: 3rem;
+  //       }
+  //       .function {
+  //         font-size: 1.5rem;
+  //       }
+  //     }
+  //   }
+  // }
+
+  #credits-1{
+    background-size: cover;
+  }
+
+  #credits-2{
+    background-size: cover;
+  }
+
+  #credits-3{
+    background-size: cover;
+  }
+
+  // Contactos
+  #contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: $secondary-color;
+    color: $primary-color;
+    background-size: cover;
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      padding: 3% 0 0 5%;
+
+      .title {
+        font-family: Bon_Voyage;
+        font-size: 4rem;
+      }
+
+      .email {
+        .email-subtitle {
+          color: $primary-color;
+          font-size: 1.5rem;
+
+          &:hover {
+            text-decoration: underline;
+            text-decoration-color: $primary-color;
+          }
+        }
+
+        .email-title {
+          font-family: Text_Montserrat_Bold;
+          font-weight: bold;
+          font-size: 1.5rem;
+        }
+      }
+
+      .social-media {
+        display: flex;
+        flex-direction: row;
+        font-size: 1.5rem;
+        margin-top: 1rem;
+
+        .instagram {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          margin-right: 2rem;
+
+          img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+          }
+        }
+
+        .behance {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+
+          img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+          }
+        }
+
+        .social-username {
+          color: $primary-color;
+
+          &:hover {
+            text-decoration: underline;
+            text-decoration-color: $primary-color;
+          }
+        }
+      }
+    }
+
+    .footer {
+      width: 100%;
+      height: 50%;
+      background-image: $footer-img;
+      background-size: 100%;
+      background-position: 70% 65%;
+      align-self: flex-end;
     }
   }
 }

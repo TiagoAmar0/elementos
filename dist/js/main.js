@@ -1,17 +1,17 @@
 // DOM Items
-const menu_button     = document.querySelector(".menu-btn");
-const menu            = document.querySelector(".menu");
-const menu_nav        = document.querySelector(".menu-nav");
+const menu_button = document.querySelector(".menu-btn");
+const menu = document.querySelector(".menu");
+const menu_nav = document.querySelector(".menu-nav");
 // const menu_branding   = document.querySelector(".menu-branding");
-const menu_items      = document.querySelectorAll(".menu-item");
+const menu_items = document.querySelectorAll(".menu-item");
 
 // Set initial state of menu
 let showMenu = false;
 
 menu_button.addEventListener("click", toggleMenu);
 
-function toggleMenu(){
-    if(!showMenu){
+function toggleMenu() {
+    if (!showMenu) {
         menu_button.classList.add('close');
         menu.classList.add('show');
         menu_nav.classList.add('show');

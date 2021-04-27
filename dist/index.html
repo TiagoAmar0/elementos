@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="plugins/fontawesome/css/all.min.css">
+
     <title>PAP</title>
 </head>
+
 <body id="bg-img">
     <header>
         <div class="menu-btn">
@@ -17,48 +19,234 @@
         </div>
 
         <nav class="menu">
-            <!-- <div class="menu-branding">
-                <div class="portrait"></div>
-            </div> -->
             <ul class="menu-nav">
                 <li class="menu-item current">
-                    <a href="/index.html">Home</a>
+                    <a data-target="#welcome">Home</a>
                 </li>
                 <li class="menu-item">
-                    <a href="/sobre.html">Sobre</a>
+                    <a data-target="#intro">Sobre</a>
                 </li>
                 <li class="menu-item">
-                    <a href="/filme.html">Filme</a>
+                    <a data-target="#video">Filme</a>
                 </li>
                 <li class="menu-item">
-                    <a href="/making-of.html">Making Of</a>
+                    <a data-target="#making-of">Making Of</a>
                 </li>
                 <li class="menu-item">
-                    <a href="/agradecimentos.html">Agradecimentos</a>
+                    <a data-target="#credits">Agradecimentos</a>
                 </li>
                 <li class="menu-item">
-                    <a href="/contacta-me.html">Contacta-me</a>
+                    <a data-target="#contact">Contacta-me</a>
                 </li>
             </ul>
         </nav>
     </header>
 
-    <main id="home">
-        <h1 class="lg-heading">PAP</h1>
-        <h2 class="sm-heading">Curso de Multimédia</h2>
-        <div class="icons">
-            <a href="#">
-                <i class="fab fa-twitter"></i>
-            </a>
-            <a href="#">
-                <i class="fab fa-facebook"></i>
-            </a>
-            <a href="#">
-                <i class="fab fa-reddit"></i>
-            </a>
-        </div>
-    </main>
+    <!-- Main slider -->
+    <div class="slides">
+        <!-- Welcome Section -->
+        <section id="welcome">
+            <video autoplay muted loop id="welcome-bg-video">
+                <source src="../video/landpage_bg.mp4" type="video/mp4">
+            </video>
+            <div class="welcome-text-area">
+                <div></div>
+                <div>
+                    <h1 class="title">Elementos</h1>
+                    <!-- <h2 class="subtitle">An interactive experience that merges two nature elements through dance -->
+                    </h2>
+                </div>
+                <div class="teste">
+                    <div class="scroll_container">
+                        <h2 id="scroll-down">scroll down &#8595;</h2>
+                        <!-- <img id="scroll_icon" src="../img/scroll_icon.png" alt="scroll"> -->
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <!-- Intro Section -->
+        <section id="intro">
+            <div class="container">
+                <div class="title-container">
+                    <h1 class="title">Elementos is an interactive short-film in which the user has the possibility to navigate through the metaphor that unfolds in the form of dance throughout the story.</h1>
+                </div>
+                <div class="subtitle-container">
+                    <p class="subtitle">The film features two characters in two different nature elements. The action develops in the form of a danced poem where Earth and Water depart from their solitude to a harmony found in their union.
+                    </p>
+                </div>
+                <button id="watch-video-btn">Watch Video</button>
+            </div>
+        </section>
+
+        <!-- Video Section -->
+        <section id="video">
+            <div class="container">
+                <div class="video-container">
+                    <video id="video-1" src="../video/video-1.mp4" controls></video>
+                    <video id="video-2" style="display:none" src="../video/video-2.mp4" muted controls></video>
+                </div>
+            </div>
+        </section>
+
+        <!-- Making Of -->
+        <section id="making-of">
+            <div class="container">
+                <div class="video-container">
+                    <video src="../video/making-of.mp4" controls></video>
+                </div>
+            </div>
+        </section>
+
+        <!-- Credits Section -->
+        <section id="credits">
+            <div class="photo">
+                <img src="../img/sample.jpg" alt="">
+            </div>
+            <div class="container">
+                <div class="title-container">
+                    <h1 class="title">Credits</h1>
+                </div>
+                <div class="subtitle-container">
+                    <p class="subtitle">
+                        "Alone we can do so little; together we can do so much." – Helen Keller
+                        <br><br>
+                        The realization of a project of this nature is not only due to its author, but rather, to all those who directly or indirectly got involved. It was huge and constant the sharing and dedication of all the people involved, not only through suggestions and technical advice  but for the courage and strength that others gave me to keep going.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="credits_1" class="credits-person">
+            <div class="container">
+                <div class="person">
+                    <div class="person-picture">
+                        <img src="../img/rita.jpg" alt="">
+                    </div>
+                    <div class="person-description-container">
+                        <h1 class="name">Rita Santos</h1>
+                        <p class="function">Dançarina Terra</p>
+                    </div>
+                </div>
+                <div class="person">
+                    <div class="person-picture">
+                        <img src="../img/alice.jpg" alt="">
+                    </div>
+                    <div class="person-description-container">
+                        <h1 class="name">Alice Queiroz</h1>
+                        <p class="function">Dançarina Mar</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="credits_2" class="credits-person">
+            <div class="container">
+                <div class="person">
+                    <div class="person-picture">
+                        <img src="../img/miguel.jpg" alt="">
+                    </div>
+                    <div class="person-description-container">
+                        <h1 class="name">Miguel Silva</h1>
+                        <p class="function">Assistente de produção e gravação</p>
+                    </div>
+                </div>
+                <div class="person">
+                    <div id="img_stretch"class="person-picture">
+                        <img src="../img/tiago.jpg" alt="">
+                    </div>
+                    <div class="person-description-container">
+                        <h1 class="name">Tiago Amaro</h1>
+                        <p class="function">Assistente de programação</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="credits_2" class="credits-person">
+            <div class="container">
+                <div class="person">
+                    <div class="person-picture">
+                        <img id="only-photo" src="../img/ana.jpg" alt="">
+                    </div>
+                    <div class="person-description-container">
+                        <h1 class="name">Ana Sardinha</h1>
+                        <p class="function">Ajuda na escrita do guião</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+<!-- 
+        <section id="credits_1" class="credits-person">
+            <div class="person-picture">
+                <img src="../img/person-sample.jpg" alt="">
+            </div>
+            <div class="person-description">
+                <div class="person-description-container">
+                    <h1 class="name">Rita Santos</h1>
+                    <p class="function">Dançarina Terra</p>
+                </div>
+                <div class="person-description-container">
+                    <h1 class="name">Alice Queiroz</h1>
+                    <p class="function">Dançarina Mar</p>
+                </div>
+            </div>
+            <div class="person-picture">
+                <img src="../img/person-sample.jpg" alt="">
+            </div>
+        </section> -->
+
+        <!-- Contact Me -->
+        <section id="contact">
+            <div class="container">
+                <h1 class="title">Contact me</h1>
+
+                <div class="email">
+                    <h1 class="email-title">DM or email me at: </h1><a href="mailto:inessardinhasantos@gmail.com"
+                        class="email-subtitle">inessardinhasantos@gmail.com</a>
+                </div>
+
+                <div class="social-media">
+                    <div class="instagram">
+                        <img src="../img/instagram.png" alt="instagram">
+                        <a href="https://www.instagram.com/inessardinhasantos"
+                            class="social-username">inessardinhasantos</a>
+                    </div>
+                    <div class="behance">
+                        <img src="../img/behance.png" alt="behance">
+                        <a href="https://www.behance.net/mariasantos52" class="social-username">mariasantos52</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer"></div>
+        </section>
+    </div>
+
+    <script src="js/slider.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/video.js"></script>
+
+    <script>
+        var slides = slider(".slides");
+
+
+        menu_items.forEach(item => item.addEventListener("click", (e) => {
+            // Go to target
+            var target = e.target.getAttribute("data-target")
+            slides.gotoSlide(target);
+        }));
+
+        var botao_next = document.getElementById("scroll-down");
+        botao_next.addEventListener("click", function () {
+            slides.gotoSlide("#intro");
+        });
+
+        var botao_watch_video = document.getElementById("watch-video-btn");
+        botao_watch_video.addEventListener("click", function () {
+            slides.gotoSlide("#video");
+        });
+
+
+    </script>
 </body>
+
 </html>

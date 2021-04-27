@@ -11,7 +11,7 @@
     width: 28px;
     height: 3px;
     margin: 0 0 5px 0;
-    background: white;
+    background: $secondary-color;
     @include easeOut;
   }
 
@@ -84,11 +84,13 @@
     &.current > a {
       text-decoration: underline;
       text-decoration-color: $secondary-color;
+      -webkit-text-decoration-color: $secondary-color;
       text-decoration-thickness: 0.4rem;
     }
   }
 
   .menu-item a {
+    cursor: pointer;
     display: inline-block;
     position: relative;
     font-size: 30px;
