@@ -378,7 +378,9 @@ body .slider__body {
   flex-direction: row;
   justify-content: flex-end;
   background-color: #e8e8e8;
-  color: #2f2f2f; }
+  color: #2f2f2f;
+  padding-left: 5%;
+  padding-top: 2%; }
   .slides #credits .photo {
     display: flex;
     justify-content: center;
@@ -387,7 +389,7 @@ body .slider__body {
     height: 100%;
     padding-bottom: 5%; }
     .slides #credits .photo img {
-      width: 50%;
+      width: 60%;
       height: auto; }
   .slides #credits .container {
     width: 60%;
@@ -397,7 +399,7 @@ body .slider__body {
       font-family: Bon_Voyage;
       font-size: 7rem; }
     .slides #credits .container .subtitle-container {
-      width: 80%; }
+      width: 90%; }
       .slides #credits .container .subtitle-container .subtitle {
         font-size: 1.5rem; }
 
@@ -406,8 +408,38 @@ body .slider__body {
   color: #2f2f2f;
   display: flex;
   justify-content: space-around;
-  align-items: center;
-  padding-top: 5%; }
+  align-items: center; }
+  .slides .credits-person .container3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    width: 90%; }
+    .slides .credits-person .container3 .person {
+      flex-direction: column;
+      width: 70%;
+      display: flex;
+      justify-content: flex-end;
+      height: 100%; }
+      .slides .credits-person .container3 .person .person-picture {
+        height: 70vh; }
+      .slides .credits-person .container3 .person img {
+        width: 67%;
+        height: 100%; }
+      .slides .credits-person .container3 .person #img_stretch img {
+        width: 70% !important; }
+      .slides .credits-person .container3 .person #only-photo {
+        width: 40% !important; }
+      .slides .credits-person .container3 .person .person-description-container {
+        line-height: 100%;
+        margin-top: 7%; }
+        .slides .credits-person .container3 .person .person-description-container .name {
+          padding-top: 10px;
+          font-family: Bon_Voyage;
+          font-size: 3rem; }
+        .slides .credits-person .container3 .person .person-description-container .function {
+          font-size: 1.5rem;
+          padding-top: 10px; }
   .slides .credits-person .container {
     display: flex;
     flex-direction: row;
@@ -416,7 +448,7 @@ body .slider__body {
     width: 65%; }
     .slides .credits-person .container .person {
       flex-direction: column;
-      width: 75%;
+      width: 70%;
       display: flex;
       justify-content: flex-end;
       height: 100%; }
@@ -436,6 +468,7 @@ body .slider__body {
           font-family: Bon_Voyage;
           font-size: 3rem; }
         .slides .credits-person .container .person .person-description-container .function {
+          padding-top: 10px;
           font-size: 1.5rem; }
 
 .slides #credits-1 {
@@ -461,21 +494,23 @@ body .slider__body {
     .slides #contact .container .title {
       font-family: Bon_Voyage;
       font-size: 4rem; }
-    .slides #contact .container .email .email-subtitle {
-      color: #2f2f2f;
-      font-size: 1.5rem; }
-      .slides #contact .container .email .email-subtitle:hover {
-        text-decoration: underline;
-        text-decoration-color: #2f2f2f; }
-    .slides #contact .container .email .email-title {
-      font-family: Text_Montserrat_Bold;
-      font-weight: bold;
-      font-size: 1.5rem; }
+    .slides #contact .container .email {
+      padding-top: 1rem; }
+      .slides #contact .container .email .email-subtitle {
+        color: #2f2f2f;
+        font-size: 1.5rem; }
+        .slides #contact .container .email .email-subtitle:hover {
+          text-decoration: underline;
+          text-decoration-color: #2f2f2f; }
+      .slides #contact .container .email .email-title {
+        font-family: Text_Montserrat_Bold;
+        font-weight: bold;
+        font-size: 1.5rem; }
     .slides #contact .container .social-media {
       display: flex;
       flex-direction: row;
       font-size: 1.5rem;
-      margin-top: 1rem; }
+      margin-top: 2.2rem; }
       .slides #contact .container .social-media .instagram {
         display: flex;
         flex-direction: row;
@@ -503,5 +538,5 @@ body .slider__body {
     height: 50%;
     background-image: url("../../img/footer-bg.jpeg");
     background-size: 100%;
-    background-position: 70% 65%;
+    background-position: 70% 48%;
     align-self: flex-end; }
